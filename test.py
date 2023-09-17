@@ -6,7 +6,9 @@ import plotly.graph_objs as go
 from datetime import datetime
 import yfinance as yf
 
-nsdq = pd.read_csv('Data/NASDAQcompanylist.csv')
+
+github_csv_url = 'https://github.com/gayatrisood2000/stock-ticker/blob/main/NASDAQcompanylist.csv'
+nsdq = pd.read_csv(github_csv_url)
 nsdq.set_index('Symbol', inplace=True)
 
 app = dash.Dash()
