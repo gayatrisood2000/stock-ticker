@@ -8,7 +8,7 @@ import yfinance as yf
 
 
 github_csv_url = 'https://github.com/gayatrisood2000/stock-ticker/blob/main/NASDAQcompanylist.csv'
-nsdq = pd.read_csv(github_csv_url)
+nsdq = pd.read_csv(github_csv_url, encoding='utf-8')
 nsdq.set_index('Symbol', inplace=True)
 
 app = dash.Dash()
