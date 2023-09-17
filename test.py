@@ -10,6 +10,7 @@ nsdq = pd.read_csv('Data/NASDAQcompanylist.csv')
 nsdq.set_index('Symbol', inplace=True)
 
 app = dash.Dash()
+server = app.server
 
 dropdown_options = []
 for tic in nsdq.index:
